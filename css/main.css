@@ -1,0 +1,40 @@
+body {
+	background: #1a1a1a;
+	color: #fff;
+
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+    margin: 0;
+}
+
+h1 {
+    font-family: "Jockey One", "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 3em;
+}
+
+a {
+    color: #ccc;
+    text-decoration: underline;
+}
+a:visited {
+    color: #999;
+}
+a:hover {
+    color: #ccc;
+    background: #333;
+    text-decoration: none;
+}
+a:active {
+    color: #000;
+    background: #444;
+    text-decoration: none;
+}
+
+.container {
+	width: 400px;
+	margin: 0 auto;
+}
+
+#footer {
+	margin-top: 2em;
+}
