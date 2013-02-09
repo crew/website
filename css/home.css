@@ -8,3 +8,28 @@ img{
 	font-size: 35px;
 }
 
+#left{
+	float: left;
+}
+
+#right{
+	float: right;
+	padding-top: 14px;
+	line-height: 25px;
+}
+
+#right ul{
+	list-style: none;
+	text-align: right;
+}
+
+#right a{
+	color: grey;
+	padding: 3px;
+}
+
+#right a:hover{
+	background: grey;
+	color: white;
+	text-decoration: none;
+}
