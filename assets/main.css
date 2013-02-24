@@ -1,0 +1,260 @@
+/*
+* CREW Website 
+* by Nick Alekhine
+*/
+
+
+/*--------------------------------------------------------*/
+/* Setting up generic stuff */
+body {
+	padding:0px;	
+	margin:0px;	
+	background-color:#181818;
+}
+
+/*--------------------------------------------------------*/
+/* Divs */
+div {
+	padding:0px;	
+	margin:0px;	
+	overflow:hidden;
+}
+div.container /* Main container for page. */ {
+	position:relative;
+	min-height:100%;		
+	min-width:1024px;
+}
+div.header_container {
+	position:relative;
+	background-color:#fefefe;
+	width:100%;
+
+	padding-top:10px;
+	padding-bottom:10px;
+}
+	div.header {
+		margin:auto;
+		width:1024px;
+	}
+		div.banner_container {
+			float:left;
+
+		}
+		div.main_nav_container {
+			float:right;
+		}
+	div.meat {
+		position:relative;
+		margin:auto;
+		width:1024px;
+		overflow:hidden;
+		background-color: transparent;
+		top:13px;
+		padding-top:10px;
+		padding-bottom:120px;
+		/*
+		-moz-box-shadow: -4px 4px 0 4px #3f3f3f;
+		-webkit-box-shadow: -4px 4px 0 4px #3f3f3f;
+		box-shadow: -4px 4px 0 4px #3f3f3f;
+		*/
+	}
+		div#meat_header {
+			background-color:#3f3f3f; 
+			width:100%;
+			border-bottom:8px solid;							
+			border-color:#333333;
+			padding-left:10px;
+		}
+		div.section_title {
+			background-color: #3f3f3f;
+			margin-left:10px;
+			margin-bottom:-8px;
+			padding:5px;
+			border-radius:1px;
+		}
+		div.section_body {
+			padding-left:10px;
+			background-color:#fefefe;
+			border-top:8px solid;
+			border-color:#3f3f3f;
+			margin-bottom:20px;
+			padding-bottom:10px;
+			padding-right:10px;
+		}
+		div.column_a {
+			float:left;
+			width:760px;
+			background-color: transparent;
+		}
+		div.column_b {
+			float:right;
+			width:200;
+			background-color: transparent;
+		}
+div.footer_container {
+	position:absolute;
+	width:100%;
+	min-width:1024px;
+	background-color:#3f3f3f;
+	border-top:8px solid;
+	border-color:#333333;
+	bottom:0px;
+}
+	div.footer {
+		width:1024px;
+		margin:auto;
+		padding-bottom:10px;
+	}
+
+
+/*--------------------------------------------------------*/
+/* Links */
+a {
+	text-decoration:none;
+}
+a.banner /* Main banner for all pages */ {
+	background: url('header/banner.png') no-repeat 0 0;
+	width:365px;
+	height:75px;
+	margin-top:10px;
+	margin-bottom:10px;
+	padding:0px;
+	display:block;
+	-webkit-transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+}
+a.banner:hover {
+	cursor:pointer;
+	opacity:.5;
+}
+a.main_nav {
+	font-family: sans-serif;
+	font-weight:bold; 
+	font-size:2.5em;
+	color:#262626;
+	border-bottom:14px solid;
+	padding-bottom:10px;
+	padding-top:0px;
+	margin-top:16px;
+	text-align:center;
+	display:block;
+	-webkit-transition: color .25s ease-in-out;
+	-moz-transition: color .25s ease-in-out;
+}
+a.main_nav:hover {
+	color:#9c9c9c;
+}
+a.t1 {
+	font-family: Open Sans;
+	color:#4966a7;
+	font-size:.9em;
+}
+a.t1:hover {
+	text-decoration: underline;
+}
+
+a#northeastern_logo {
+	background: url('footer/northeastern_logo.png') no-repeat 0 0;
+	background-size:100%;
+	display:block;
+	width:351px;
+	height:33px;
+	margin:10px;
+}
+a#northeastern_sub_logo {
+	background: url('footer/ne_sub_logo.png') no-repeat 0 0;
+	background-size:100%;
+	display:block;
+	width:344px;
+	height:18px;
+	margin:-10 0 0 10px;
+}
+
+
+/*--------------------------------------------------------*/
+/* Lists */
+ul.main_nav /*Used in main navigation bar*/ {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	width:100%;
+}
+
+li.main_nav /*Used in main navigation bar*/ {
+	float:left;
+	width:205px;
+}
+
+/*--------------------------------------------------------*/
+/* Tables */
+table {
+	padding:0px;
+	margin:0px;
+}
+
+/*--------------------------------------------------------*/
+/* Text */
+p {
+	color:#000000;
+	font-size:.9em;
+	font-family: Open Sans, verdana;
+	margin:0;
+	padding:0;
+}
+p.small {
+	font-size:.8em;
+}
+p.footer {
+	color:#efefef;
+	font-size:.8em;
+	margin-left:10px
+}
+h1 {
+	color:#000000;
+	font-size:3em;
+	font-family: Open Sans, sans-serif;
+	font-weight:400;
+	margin:0;
+	padding:0;
+}
+h1.section_title {
+	font-size:2em;
+	font-weight:bold;
+	color:#fefefe;
+	font-family: sans-serif;
+}
+h2 {
+	color:#262626;
+	font-size:2em;
+	font-family: sans-serif;
+	font-weight:200;
+	margin:0;
+	padding:0;
+}
+h3 {
+	color:#262626;
+	font-size:1.5em;
+	font-family:Open Sans, sans-serif;
+	font-weight:400;
+	margin:0;
+	padding:0;
+}
+
+
+/*--------------------------------------------------------*/
+/* Images */
+img {
+	margin:15px auto;
+	display:block;
+	box-shadow:0px 0px 10px 1px #333333;
+}
+
+
+
+
+
+
+
+
+
