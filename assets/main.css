@@ -210,6 +210,13 @@ p.footer {
 	font-size:.8em;
 	margin-left:10px
 }
+p.tagline {
+	font-size: 25px;
+	font-family: Questrial;
+	color: white;
+	margin: auto;
+	text-align: center
+}
 h1 {
 	color:#000000;
 	font-size:3em;
