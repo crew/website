@@ -212,7 +212,7 @@ p.footer {
 }
 p.tagline {
 	font-size: 25px;
-	font-family: Questrial;
+	font-family: Questrial, sans-serif;
 	color: white;
 	margin: auto;
 	text-align: center
