@@ -73,24 +73,36 @@ div.header_container {
 			border-radius:1px;
 		}
 		div.section_body {
-			padding-left:10px;
 			background-color:#fefefe;
 			border-top:8px solid;
 			border-color:#3f3f3f;
 			margin-bottom:20px;
+			/*padding-left:10px;
 			padding-bottom:10px;
-			padding-right:10px;
+			padding-right:10px;*/
 		}
 		div.column_a {
 			float:left;
 			width:760px;
 			background-color: transparent;
 		}
+		div.column_a .section_body{
+				padding-left: 30px;
+				padding-right: 30px;
+				padding-top: 10px;
+				padding-bottom: 20px;
+		}
 		div.column_b {
 			float:right;
 			width:200;
 			background-color: transparent;
 		}
+		div.column_b .section_body{
+				padding-left: 15px;
+				padding-right: 15px;
+				padding-top: 10px;
+				padding-bottom: 15px;
+			}
 div.footer_container {
 	position:absolute;
 	width:100%;
@@ -173,7 +185,7 @@ a#northeastern_sub_logo {
 
 /*--------------------------------------------------------*/
 /* Lists */
-ul.main_nav /*Used in main navigation bar*/ {
+ul.main_nav, ul.other_nav /*Used in main navigation bar*/ {
 	list-style-type:none;
 	margin:0;
 	padding:0;
@@ -184,6 +196,12 @@ ul.main_nav /*Used in main navigation bar*/ {
 li.main_nav /*Used in main navigation bar*/ {
 	float:left;
 	width:205px;
+}
+
+li.other_nav /*Used in column b navigation bar*/{
+	float:left;
+	width:205px;
+	padding-right:16px;
 }
 
 /*--------------------------------------------------------*/
@@ -210,6 +228,9 @@ p.footer {
 	font-size:.8em;
 	margin-left:10px
 }
+.column_a p{
+	line-height: 23px;
+}
 h1 {
 	color:#000000;
 	font-size:3em;
@@ -230,7 +251,7 @@ h2 {
 	font-family: sans-serif;
 	font-weight:200;
 	margin:0;
-	padding:0;
+	padding:10 0px;
 }
 h3 {
 	color:#262626;
