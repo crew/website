@@ -9,7 +9,7 @@
 body {
 	padding:0px;	
 	margin:0px;	
-	background-color:#181818;
+	background-image: url('images/st.png');
 }
 
 /*--------------------------------------------------------*/
@@ -204,6 +204,14 @@ li.other_nav /*Used in column b navigation bar*/{
 	padding-right:16px;
 }
 
+li.other_nav a img{
+	-webkit-transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+}
+
+li.other_nav a img:hover{	
+	opacity:0.4;
+}
 /*--------------------------------------------------------*/
 /* Tables */
 table {
