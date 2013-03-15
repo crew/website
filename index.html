@@ -175,49 +175,6 @@
 								<br>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat lacus vitae risus dignissim at iaculis arcu elementum. Cras consectetur, diam sed auctor dignissim, magna mauris malesuada tortor, et porttitor turpis ipsum eget arcu. Donec sed eleifend tortor. Aenean ante enim, faucibus vel lacinia ut, placerat eget lorem. Praesent sed urna sed orci malesuada lobortis. Fusce ut augue vel nibh aliquam ultricies ut at risus. Morbi ac libero sapien, et dignissim felis. Nulla facilisi. Morbi rhoncus purus a ligula rhoncus pharetra. Donec erat lacus, posuere at bibendum et, hendrerit vel nunc. Cras eu nibh nec leo dictum porta in quis libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 							</p>
-							<!-- Container for current projects; used to make the bottom border move from below the project_header to the bottom of the project body. -->
-							<div class = "project_container">
-								<!-- Project Header -->
-								<div class = "project_header">
-									<!-- Title -->
-									<h2 style = "float:left">Current Projects</h2>
-									<!-- Up state arrow key -->
-									<a id = "current_project_up" class = "t2" style = "float:right" onmouseover = "this.style.cursor='pointer'" onclick = "switchMenu('current_projects');switchMenu('current_project_up');switchMenu('current_project_down')">&#9660;</a>
-									<!-- Down state arrow key -->
-									<a id = "current_project_down" class = "t2" style = "display:none;float:right" onmouseover = "this.style.cursor='pointer'" onclick = "switchMenu('current_projects');switchMenu('current_project_up');switchMenu('current_project_down')">&#9650;</a>
-								</div>
-								<!-- List of current projects -->
-								<div id = "current_projects" style = "display:none">
-									<div>
-										<a href = "https://github.com/crew/crewu-bootcamp" class = "t2" >
-											CREWu 
-										</a>
-										<p>
-											CREWu is a project currently under development that is meant to teach new members how to use various toolsets and languages applicable to CREW.
-										</p>
-									</div>
-									<br>	
-									<div>
-										<a href = "#" class = "t2" >
-											Project 2 
-										</a>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus rhoncus malesuada. Curabitur aliquet vestibulum eros sed feugiat. Phasellus imperdiet diam a orci convallis eu fermentum mi porta. Phasellus felis diam, cursus varius aliquet id, vestibulum eu arcu. Nunc at libero ut eros suscipit fringilla eu vitae est. Morbi pharetra convallis felis vel tincidunt. Nam id dolor nisi. Vestibulum molestie mauris a sapien commodo viverra. Ut vulputate, turpis et imperdiet auctor, ipsum sapien auctor erat, id venenatis libero lacus sit amet ligula. Phasellus est sapien, eleifend eget dictum quis, accumsan a nulla.														
-										</p>
-									</div>
-									<br>
-									<div>
-										<a href = "#" class = "t2" >
-											Project 3 
-										</a>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus rhoncus malesuada. Curabitur aliquet vestibulum eros sed feugiat. Phasellus imperdiet diam a orci convallis eu fermentum mi porta. Phasellus felis diam, cursus varius aliquet id, vestibulum eu arcu. Nunc at libero ut eros suscipit fringilla eu vitae est. Morbi pharetra convallis felis vel tincidunt. Nam id dolor nisi. Vestibulum molestie mauris a sapien commodo viverra. Ut vulputate, turpis et imperdiet auctor, ipsum sapien auctor erat, id venenatis libero lacus sit amet ligula. Phasellus est sapien, eleifend eget dictum quis, accumsan a nulla.
-										</p>
-									</div>
-								<!-- / list of current projects -->
-								</div>
-							<!-- / current projects container -->
-							</div>
 
 							<!-- Container for completed projects -->
 							<div class = "project_container">
@@ -226,9 +183,9 @@
 									<!-- Title -->
 									<h2 style = "float:left">Completed Projects</h2>
 									<!-- Up state arrow key -->
-									<a id = "completed_project_up" class = "t2" style = "float:right" onmouseover = "this.style.cursor='pointer'" onclick = "switchMenu('completed_projects');switchMenu('completed_project_up');switchMenu('completed_project_down')">&#9660;</a>
+									<a id = "completed_project_up" class = "t2" style = "float:right;margin-top:12px;" onmouseover = "this.style.cursor='pointer'" onclick = "switchMenu('completed_projects');switchMenu('completed_project_up');switchMenu('completed_project_down')">&#9660;</a>
 									<!-- Down state arrow key -->
-									<a id = "completed_project_down" class = "t2" style = "display:none;float:right" onmouseover = "this.style.cursor='pointer'" onclick = "switchMenu('completed_projects');switchMenu('completed_project_up');switchMenu('completed_project_down')">&#9650;</a>
+									<a id = "completed_project_down" class = "t2" style = "display:none;float:right;margin-top:12px;" onmouseover = "this.style.cursor='pointer'" onclick = "switchMenu('completed_projects');switchMenu('completed_project_up');switchMenu('completed_project_down')">&#9650;</a>
 								</div>
 								<!-- List of completed projects -->
 								<div id = "completed_projects" style = "display:none">	
@@ -254,6 +211,60 @@
 								</div>
 							<!-- / completed projects container -->	
 							</div>
+
+							<!-- Container for current projects; used to make the bottom border move from below the project_header to the bottom of the project body. -->
+							<div class = "project_container">
+								<!-- Project Header -->
+								<div class = "project_header">
+									<!-- Title -->
+									<h2 style = "float:left">Current Projects</h2>
+									<!-- Up state arrow key -->
+									<a id = "current_project_up" class = "t2" style = "float:right;margin-top:12px;" onmouseover = "this.style.cursor='pointer'" onclick = "switchMenu('current_projects');switchMenu('current_project_up');switchMenu('current_project_down')">&#9660;</a>
+									<!-- Down state arrow key -->
+									<a id = "current_project_down" class = "t2" style = "display:none;float:right;margin-top:12px;" onmouseover = "this.style.cursor='pointer'" onclick = "switchMenu('current_projects');switchMenu('current_project_up');switchMenu('current_project_down')">&#9650;</a>
+								</div>
+								<!-- List of current projects -->
+								<div id = "current_projects" style = "display:none">
+									<div>
+										<a href = "https://github.com/crew/crewtinuous-deployment" class = "t2" >
+											Crewtinuous Deployment
+										</a>
+										<p>
+											This projected is a deployment system for crew. It hooks into Github's WebHook Service Hooks. Configure a webserver to host this repo then point the Service Hook at that URL.
+										</p>
+									</div>
+									<br>	
+									<div>
+										<a href = "https://github.com/crew/crewu-bootcamp" class = "t2" >
+											CrewU
+										</a>
+										<p>
+											CrewU is a current project that is meant to teach incoming and current Crew members the basics of Linux and Web Development. The project is broken down into 4 parts: Linux Basics, Linux Advanced, Linux Infrastructure, and Web Development. 						
+										</p>
+									</div>
+									<br>
+									<div>
+										<a href = "https://github.com/crew/dds" class = "t2" >
+											Digital Display System
+										</a>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus rhoncus malesuada. Curabitur aliquet vestibulum eros sed feugiat. Phasellus imperdiet diam a orci convallis eu fermentum mi porta. Phasellus felis diam, cursus varius aliquet id, vestibulum eu arcu. Nunc at libero ut eros suscipit fringilla eu vitae est. Morbi pharetra convallis felis vel tincidunt. Nam id dolor nisi. Vestibulum molestie mauris a sapien commodo viverra. Ut vulputate, turpis et imperdiet auctor, ipsum sapien auctor erat, id venenatis libero lacus sit amet ligula. Phasellus est sapien, eleifend eget dictum quis, accumsan a nulla.
+										</p>
+									</div>
+									<br>
+									<div>
+										<a href = "https://github.com/crew/metrics2" class = "t2" >
+											Metrics
+										</a>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus rhoncus malesuada. Curabitur aliquet vestibulum eros sed feugiat. Phasellus imperdiet diam a orci convallis eu fermentum mi porta. Phasellus felis diam, cursus varius aliquet id, vestibulum eu arcu. Nunc at libero ut eros suscipit fringilla eu vitae est. Morbi pharetra convallis felis vel tincidunt. Nam id dolor nisi. Vestibulum molestie mauris a sapien commodo viverra. Ut vulputate, turpis et imperdiet auctor, ipsum sapien auctor erat, id venenatis libero lacus sit amet ligula. Phasellus est sapien, eleifend eget dictum quis, accumsan a nulla.
+										</p>
+									</div>
+								<!-- / list of current projects -->
+								</div>
+							<!-- / current projects container -->
+							</div>
+
 						<!-- / section body -->
 						</div>
 					<!-- / projects -->

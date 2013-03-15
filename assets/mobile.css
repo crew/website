@@ -4,8 +4,7 @@
 * By Nick Alekhine
 */
 
-@media screen and (max-width: 720px) { 
-	
+@media screen and (max-width: 1024px) { 
 	/*--------------------------------------------------------*/
 	/* Divs */
 	div.container {
@@ -49,7 +48,6 @@
 			}
 			div.column_a {
 				float:left;
-				width:100%;
 				background-color: transparent;
 			}
 				div.column_a .section_body{
@@ -58,7 +56,6 @@
 				}
 			div.column_b {
 				float:right;
-				width:100%;
 				background-color: transparent;
 			}
 	div.footer_container {
@@ -79,6 +76,27 @@
 	}
 }
 
+
+@media screen and (max-width: 973px) { 
+	
+	/*--------------------------------------------------------*/
+	/* Divs */
+	div.column_a {
+		float:left;
+		width:100%;
+		background-color: transparent;
+	}
+	div.column_a .section_body{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	div.column_b {
+		float:right;
+		width:100%;
+		background-color: transparent;
+	}
+}
+
 @media screen and (max-width: 480px) { 
 
 	div.meat {
@@ -94,7 +112,7 @@
 	}
 
 	a.top_button /* Top button */ {
-		font-size:1.5em;
+		font-size:1.7em;
 	}
 
 }
