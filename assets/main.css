@@ -1,13 +1,13 @@
 /*
-* CREW Website 
+* CREW Website
 */
 
 
 /*--------------------------------------------------------*/
 /* Setting up generic stuff */
 body {
-	padding:0px;	
-	margin:0px;	
+	padding:0px;
+	margin:0px;
 	background-color:#181818;
 	background-image:url('background/bg_squares.png');
 	background-repeat:repeat;
@@ -16,13 +16,13 @@ body {
 /*--------------------------------------------------------*/
 /* Divs */
 div {
-	padding:0px;	
-	margin:0px;	
+	padding:0px;
+	margin:0px;
 	overflow:hidden;
 }
 div.container /* Main container for page. */ {
 	position:relative;
-	min-height:100%;		
+	min-height:100%;
 	min-width:1024px;
 }
 div.header_container /* Container for header (banner + logo) */ {
@@ -60,8 +60,8 @@ div.header_container /* Container for header (banner + logo) */ {
 			margin-bottom:10px;
 		}
 		div.meat_header {
-			background-color:#3f3f3f; 
-			border-bottom:8px solid;							
+			background-color:#3f3f3f;
+			border-bottom:8px solid;
 			border-color:#333333;
 			padding:10px;
 		}
@@ -88,7 +88,7 @@ div.header_container /* Container for header (banner + logo) */ {
 				padding-bottom:10px;
 			}
 				div.project_header {
-					
+
 				}
 		div.column_a {
 			float:left;
@@ -155,7 +155,7 @@ a.banner:hover {
 }
 a.main_nav /* Main navigation elements */ {
 	font-family: sans-serif;
-	font-weight:bold; 
+	font-weight:bold;
 	font-size:2.5em;
 	color:#262626;
 	border-bottom:14px solid;
@@ -185,6 +185,13 @@ a.t2 /* Link type 2. Used for element switcher */ {
 	font-weight:200;
 	margin:0;
 	padding:0;
+}
+a.t2[id*="project"] {
+    float:right;
+    margin-top:12px;
+}
+a.t2[id*="project"]:hover {
+    cursor: pointer;
 }
 a.t2:hover {
 	text-decoration: underline;
@@ -237,12 +244,12 @@ li.other_nav /*Used in column b navigation bar*/{
 	padding-right:16px;
 }
 
-li.other_nav a img{
+.social{
 	-webkit-transition: opacity .25s ease-in-out;
 	-moz-transition: opacity .25s ease-in-out;
 }
 
-li.other_nav a img:hover{	
+.social:hover{
 	opacity:0.4;
 }
 /*--------------------------------------------------------*/
@@ -316,12 +323,3 @@ img {
 	display:block;
 	box-shadow:0px 0px 10px 1px #333333;
 }
-
-
-
-
-
-
-
-
-

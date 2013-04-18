@@ -20,7 +20,7 @@
 
 		<!-- Smooth Scrolling -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-		<script>	
+		<script>
 		var jump=function(e)
 		{
 			   //prevent the "normal" behaviour which would be a "hard" jump
@@ -38,32 +38,30 @@
 					   //attach the hash (#jumptarget) to the pageurl
 					   location.hash = target;
 			   });
-		
+
 		}
-		
+
 		$(document).ready(function()
 		{
 			   $('a[href*=#]').bind("click", jump);
-			   return false;
+               $('a[id*="project"]').click(toggle);
+               function toggle() {
+                  prefix = this.id.split('_')[0];
+                  switchMenu(prefix + '_projects');
+                  switchMenu(prefix + '_project_up');
+                  switchMenu(prefix + '_project_down')
+               }
 		});
 		</script>
-		
+
 		<!-- Display Switcher -->
 		<script type = "text/javascript">
-		function switchMenu(obj) 
+		function switchMenu(obj)
 		{
 			var el = document.getElementById(obj);
-			if ( el.style.display != 'none' ) 
-			{
-				el.style.display = 'none';
-			}
-			else 
-			{
-				el.style.display = '';
-			}
+            el.style.display = el.style.display.length ? '' : 'none';
 		}
 		</script>
-
 
 	</head>
 	<body>
@@ -99,7 +97,6 @@
 			</div>
 		</div>
 
-		
 		<!-- Contains the meat of the page -->
 		<div class = "container">
 			<!-- Meat of the page -->
@@ -115,7 +112,7 @@
 					<div id = "bgcarousel_shell">
 						<img src = "assets/images/crew.jpg"/>
 					</div>
-					<!-- The tagline --> 
+					<!-- The tagline -->
 					<div id = "tagline" class = "meat_header">
 						<h3 class = "tagline">
 							Crew is a group of students that hack on cool projects to make our school a better place.
@@ -126,7 +123,7 @@
 
 				<!-- Column A -->
 				<div class = "column_a">
-					
+
 					<!-- About -->
 					<div id = "about">
 						<!-- Container for title and top button -->
@@ -170,7 +167,7 @@
 								Check out what we're doing.
 							</h2>
 							<p>
-								All of our projects are currently hosted on the official <a class = "t1" href = "https://github.com/crew">CREW Github account</a>. We also have constructed a list of current and completed projects seen below. 
+								All of our projects are currently hosted on the official <a class = "t1" href = "https://github.com/crew">CREW Github account</a>. We also have constructed a list of current and completed projects seen below.
 								<br>
 								<br>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat lacus vitae risus dignissim at iaculis arcu elementum. Cras consectetur, diam sed auctor dignissim, magna mauris malesuada tortor, et porttitor turpis ipsum eget arcu. Donec sed eleifend tortor. Aenean ante enim, faucibus vel lacinia ut, placerat eget lorem. Praesent sed urna sed orci malesuada lobortis. Fusce ut augue vel nibh aliquam ultricies ut at risus. Morbi ac libero sapien, et dignissim felis. Nulla facilisi. Morbi rhoncus purus a ligula rhoncus pharetra. Donec erat lacus, posuere at bibendum et, hendrerit vel nunc. Cras eu nibh nec leo dictum porta in quis libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -183,12 +180,12 @@
 									<!-- Title -->
 									<h2 style = "float:left">Completed Projects</h2>
 									<!-- Up state arrow key -->
-									<a id = "completed_project_up" class = "t2" style = "float:right;margin-top:12px;" onmouseover = "this.style.cursor='pointer'" onclick = "switchMenu('completed_projects');switchMenu('completed_project_up');switchMenu('completed_project_down')">&#9660;</a>
+									<a id = "completed_project_up" class = "t2" >&#9660;</a>
 									<!-- Down state arrow key -->
-									<a id = "completed_project_down" class = "t2" style = "display:none;float:right;margin-top:12px;" onmouseover = "this.style.cursor='pointer'" onclick = "switchMenu('completed_projects');switchMenu('completed_project_up');switchMenu('completed_project_down')">&#9650;</a>
+									<a id = "completed_project_down" class = "t2" style = "display:none;">&#9650;</a>
 								</div>
 								<!-- List of completed projects -->
-								<div id = "completed_projects" style = "display:none">	
+								<div id = "completed_projects" style = "display:none">
 									<div>
 										<a href = "http://pitcam.ccs.neu.edu" class = "t2" >
 											Pitcam
@@ -209,7 +206,7 @@
 									</div>
 								<!-- / list of completed projects -->
 								</div>
-							<!-- / completed projects container -->	
+							<!-- / completed projects container -->
 							</div>
 
 							<!-- Container for current projects; used to make the bottom border move from below the project_header to the bottom of the project body. -->
@@ -219,9 +216,9 @@
 									<!-- Title -->
 									<h2 style = "float:left">Current Projects</h2>
 									<!-- Up state arrow key -->
-									<a id = "current_project_up" class = "t2" style = "float:right;margin-top:12px;" onmouseover = "this.style.cursor='pointer'" onclick = "switchMenu('current_projects');switchMenu('current_project_up');switchMenu('current_project_down')">&#9660;</a>
+									<a id = "current_project_up" class = "t2">&#9660;</a>
 									<!-- Down state arrow key -->
-									<a id = "current_project_down" class = "t2" style = "display:none;float:right;margin-top:12px;" onmouseover = "this.style.cursor='pointer'" onclick = "switchMenu('current_projects');switchMenu('current_project_up');switchMenu('current_project_down')">&#9650;</a>
+									<a id = "current_project_down" class = "t2" style = "display:none;">&#9650;</a>
 								</div>
 								<!-- List of current projects -->
 								<div id = "current_projects" style = "display:none">
@@ -233,13 +230,13 @@
 											This projected is a deployment system for crew. It hooks into Github's WebHook Service Hooks. Configure a webserver to host this repo then point the Service Hook at that URL.
 										</p>
 									</div>
-									<br>	
+									<br>
 									<div>
 										<a href = "https://github.com/crew/crewu-bootcamp" class = "t2" >
 											CrewU
 										</a>
 										<p>
-											CrewU is a current project that is meant to teach incoming and current Crew members the basics of Linux and Web Development. The project is broken down into 4 parts: Linux Basics, Linux Advanced, Linux Infrastructure, and Web Development. 						
+											CrewU is a current project that is meant to teach incoming and current Crew members the basics of Linux and Web Development. The project is broken down into 4 parts: Linux Basics, Linux Advanced, Linux Infrastructure, and Web Development.
 										</p>
 									</div>
 									<br>
@@ -289,7 +286,7 @@
 								Got any questions?
 							</h2>
 							<p>
-								The best way to contact us is to join our 
+								The best way to contact us is to join our
 								<a class = "t1" href = "https://www.facebook.com/groups/crew.ccis/">
 									Facebook group</a>.
 								<br>
@@ -319,17 +316,17 @@
 							<ul class = "main_nav">
 								<li class = "main_nav" style = "width:40px">
 									<a href = "https://www.facebook.com/groups/crew.ccis/">
-										<img src = "assets/icons/facebook.png" style = "box-shadow:none"></img>
+										<img class="social" src = "assets/icons/facebook.png" style = "box-shadow:none"></img>
 									</a>
 								</li>
 								<li class = "main_nav" style = "width:40px">
 									<a href = "https://github.com/crew">
-										<img src = "assets/icons/github.png" style = "box-shadow:none"></img>
+										<img class="social" src = "assets/icons/github.png" style = "box-shadow:none"></img>
 									</a>
 								</li>
 								<li class = "main_nav" style = "width:40px">
 									<a href = "https://wiki.ccs.neu.edu/display/Crew/Home">
-										<img src = "assets/icons/wiki.png" style = "box-shadow:none"></img>
+										<img class="social" src = "assets/icons/wiki.png" style = "box-shadow:none"></img>
 									</a>
 								</li>
 							</ul>
@@ -377,17 +374,17 @@
 						<ul class = "main_nav">
 							<li class = "main_nav" style = "width:40px">
 								<a href = "https://www.facebook.com/groups/crew.ccis/">
-									<img src = "assets/icons/facebook.png" style = "box-shadow:none"></img>
+									<img class="social" src = "assets/icons/facebook.png" style = "box-shadow:none"></img>
 								</a>
 							</li>
 							<li class = "main_nav" style = "width:40px">
 								<a href = "https://github.com/crew">
-									<img src = "assets/icons/github.png" style = "box-shadow:none"></img>
+									<img class="social" src = "assets/icons/github.png" style = "box-shadow:none"></img>
 								</a>
 							</li>
 							<li class = "main_nav" style = "width:40px">
 								<a href = "https://wiki.ccs.neu.edu/display/Crew/Home">
-									<img src = "assets/icons/wiki.png" style = "box-shadow:none"></img>
+									<img class="social" src = "assets/icons/wiki.png" style = "box-shadow:none"></img>
 								</a>
 							</li>
 						</ul>
