@@ -1,49 +1,49 @@
 <!-- CREW DEPLOY READY -->
 <html>
-	<head>
-		<!-- Title -->
-		<title>CREW | HOME</title>
+  <head>
+    <!-- Title -->
+    <title>CREW | HOME</title>
 
-		<!-- Main CSS File -->
-		<link rel="stylesheet" type="text/css" href="assets/main.css" />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" type="text/css" href="assets/main.css" />
 
-		<!-- Mobile Stuff + CSS -->
-		<link rel = "stylesheet" type = "text/css" href = "assets/mobile.css" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0;">
+    <!-- Mobile Stuff + CSS -->
+    <link rel = "stylesheet" type = "text/css" href = "assets/mobile.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0;">
 
-		<!-- Fonts -->
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|Gentium+Book+Basic' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Questrial|Montserrat+Alternates|Press+Start+2P' rel='stylesheet' type='text/css'>
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|Gentium+Book+Basic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Questrial|Montserrat+Alternates|Press+Start+2P' rel='stylesheet' type='text/css'>
 
-		<!-- Favicon -->
-		<link rel="shortcut icon" href="assets/icons/favicon.png"/>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/icons/favicon.png"/>
 
-		<!-- Smooth Scrolling -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-		<script>
-		var jump=function(e)
-		{
-			   //prevent the "normal" behaviour which would be a "hard" jump
-			   e.preventDefault();
-			   //Get the target
-			   var target = $(this).attr("href");
-			   //perform animated scrolling
-			   $('html,body').animate(
-			   {
-					   //get top-position of target-element and set it as scroll target
-					   scrollTop: $(target).offset().top
-			   //scrolldelay: 2 seconds
-			   },1300,function()
-			   {
-					   //attach the hash (#jumptarget) to the pageurl
-					   location.hash = target;
-			   });
+    <!-- Smooth Scrolling -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <script>
+    var jump=function(e)
+    {
+         //prevent the "normal" behaviour which would be a "hard" jump
+         e.preventDefault();
+         //Get the target
+         var target = $(this).attr("href");
+         //perform animated scrolling
+         $('html,body').animate(
+         {
+             //get top-position of target-element and set it as scroll target
+             scrollTop: $(target).offset().top
+         //scrolldelay: 2 seconds
+         },1300,function()
+         {
+             //attach the hash (#jumptarget) to the pageurl
+             location.hash = target;
+         });
 
-		}
+    }
 
-		$(document).ready(function()
-		{
-			   $('a[href*=#]').bind("click", jump);
+    $(document).ready(function()
+    {
+         $('a[href*=#]').bind("click", jump);
                $('a[id*="project"]').click(toggle);
                function toggle() {
                   prefix = this.id.split('_')[0];
@@ -51,349 +51,349 @@
                   switchMenu(prefix + '_project_up');
                   switchMenu(prefix + '_project_down')
                }
-		});
-		</script>
+    });
+    </script>
 
-		<!-- Display Switcher -->
-		<script type = "text/javascript">
-		function switchMenu(obj)
-		{
-			var el = document.getElementById(obj);
+    <!-- Display Switcher -->
+    <script type = "text/javascript">
+    function switchMenu(obj)
+    {
+      var el = document.getElementById(obj);
             el.style.display = el.style.display.length ? '' : 'none';
-		}
-		</script>
+    }
+    </script>
 
-	</head>
-	<body>
+  </head>
+  <body>
 
-		<!-- Container for the header; spans entire width of page -->
-		<div class = "header_container" id = "top">
-			<!-- Container for main nav and banner; spans 1024px and centers on page -->
-			<div class = "header">
-				<!-- Banner -->
-				<div class = "banner_container">
-					<a href = "index.html" class = "banner"></a>
-				</div>
-				<!-- Main nav -->
-				<div class = "main_nav_container">
-					<ul class = "main_nav">
-						<li class = "main_nav">
-							<a class = "main_nav" href = "#about">
-								about
-							</a>
-						</li>
-						<li class = "main_nav">
-							<a class = "main_nav" href = "#projects">
-								projects
-							</a>
-						</li>
-						<li class = "main_nav">
-							<a class = "main_nav" href = "#contact">
-								contact
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+    <!-- Container for the header; spans entire width of page -->
+    <div class = "header_container" id = "top">
+      <!-- Container for main nav and banner; spans 1024px and centers on page -->
+      <div class = "header">
+        <!-- Banner -->
+        <div class = "banner_container">
+          <a href = "index.html" class = "banner"></a>
+        </div>
+        <!-- Main nav -->
+        <div class = "main_nav_container">
+          <ul class = "main_nav">
+            <li class = "main_nav">
+              <a class = "main_nav" href = "#about">
+                about
+              </a>
+            </li>
+            <li class = "main_nav">
+              <a class = "main_nav" href = "#projects">
+                projects
+              </a>
+            </li>
+            <li class = "main_nav">
+              <a class = "main_nav" href = "#contact">
+                contact
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
-		<!-- Contains the meat of the page -->
-		<div class = "container">
-			<!-- Meat of the page -->
-			<div class = "meat">
-				<!-- Container for meat header, image, and tagline -->
-				<div class = "meat_header_container">
-					<!-- The title -->
-					<div id = "header" class = "meat_header">
-						<h3 style = "color:#efefef">Northeastern University CCIS</h3>
-						<h1 style = "color:#efefef;font-family: 'Questrial';">Undergraduate Experimental Systems Group</h1>
-					</div>
-					<!-- Image Slide Show -->
-					<div id = "bgcarousel_shell">
-						<img src = "assets/images/crew.jpg"/>
-					</div>
-					<!-- The tagline -->
-					<div id = "tagline" class = "meat_header">
-						<h3 class = "tagline">
-							Crew is a group of students that hack on cool projects to make our school a better place.
-						</h3>
-					</div>
-				<!--- / container -->
-				</div>
+    <!-- Contains the meat of the page -->
+    <div class = "container">
+      <!-- Meat of the page -->
+      <div class = "meat">
+        <!-- Container for meat header, image, and tagline -->
+        <div class = "meat_header_container">
+          <!-- The title -->
+          <div id = "header" class = "meat_header">
+            <h3 style = "color:#efefef">Northeastern University CCIS</h3>
+            <h1 style = "color:#efefef;font-family: 'Questrial';">Undergraduate Experimental Systems Group</h1>
+          </div>
+          <!-- Image Slide Show -->
+          <div id = "bgcarousel_shell">
+            <img src = "assets/images/crew.jpg"/>
+          </div>
+          <!-- The tagline -->
+          <div id = "tagline" class = "meat_header">
+            <h3 class = "tagline">
+              Crew is a group of students that hack on cool projects to make our school a better place.
+            </h3>
+          </div>
+        <!--- / container -->
+        </div>
 
-				<!-- Column A -->
-				<div class = "column_a">
+        <!-- Column A -->
+        <div class = "column_a">
 
-					<!-- About -->
-					<div id = "about">
-						<!-- Container for title and top button -->
-						<div class = "section_title_container">
-							<!-- Title -->
-							<div class = "section_title" style = "width:140px;float:left;">
-								<h1 class = "section_title" style = "color:#e6f55b"> >> about</h1>
-							</div>
-							<!-- Top button -->
-							<div class = "section_title" style = "float:right">
-								<a class = "top_button" href = "#top">^</a>
-							</div>
-						</div>
-						<!-- Body -->
-						<div class = "section_body">
-							<h2>
-								We make cool stuff.
-							</h2>
-							<p>
-								We work on stuff that ranges from web development to infrastructure to cloud computing, so if you're interested in any or all of the above definitely consider getting involved. Check out the projects section on this page to see what we've worked on and what we're building now.
-							</p>
-						</div>
-					</div>
+          <!-- About -->
+          <div id = "about">
+            <!-- Container for title and top button -->
+            <div class = "section_title_container">
+              <!-- Title -->
+              <div class = "section_title" style = "width:140px;float:left;">
+                <h1 class = "section_title" style = "color:#e6f55b"> >> about</h1>
+              </div>
+              <!-- Top button -->
+              <div class = "section_title" style = "float:right">
+                <a class = "top_button" href = "#top">^</a>
+              </div>
+            </div>
+            <!-- Body -->
+            <div class = "section_body">
+              <h2>
+                We make cool stuff.
+              </h2>
+              <p>
+                We work on stuff that ranges from web development to infrastructure to cloud computing, so if you're interested in any or all of the above definitely consider getting involved. Check out the projects section on this page to see what we've worked on and what we're building now.
+              </p>
+            </div>
+          </div>
 
-					<!-- Projects -->
-					<div id = "projects">
-						<!-- Container for title and top button -->
-						<div class = "section_title_container">
-							<!-- Title -->
-							<div class = "section_title" style = "width:180px;float:left;">
-								<h1 class = "section_title" style = "color:#9ee254"> >> projects</h1>
-							</div>
-							<!-- Top button -->
-							<div class = "section_title" style = "float:right">
-								<a class = "top_button" href = "#top">^</a>
-							</div>
-						</div>
-						<!-- Body -->
-						<div class = "section_body">
-							<h2>
-								Check out what we're doing.
-							</h2>
-							<p>
-								All of our projects are currently hosted on the official <a class = "t1" href = "https://github.com/crew">CREW Github account</a>. We also have constructed a list of current and completed projects seen below.
-								<br>
-								<br>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat lacus vitae risus dignissim at iaculis arcu elementum. Cras consectetur, diam sed auctor dignissim, magna mauris malesuada tortor, et porttitor turpis ipsum eget arcu. Donec sed eleifend tortor. Aenean ante enim, faucibus vel lacinia ut, placerat eget lorem. Praesent sed urna sed orci malesuada lobortis. Fusce ut augue vel nibh aliquam ultricies ut at risus. Morbi ac libero sapien, et dignissim felis. Nulla facilisi. Morbi rhoncus purus a ligula rhoncus pharetra. Donec erat lacus, posuere at bibendum et, hendrerit vel nunc. Cras eu nibh nec leo dictum porta in quis libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							</p>
+          <!-- Projects -->
+          <div id = "projects">
+            <!-- Container for title and top button -->
+            <div class = "section_title_container">
+              <!-- Title -->
+              <div class = "section_title" style = "width:180px;float:left;">
+                <h1 class = "section_title" style = "color:#9ee254"> >> projects</h1>
+              </div>
+              <!-- Top button -->
+              <div class = "section_title" style = "float:right">
+                <a class = "top_button" href = "#top">^</a>
+              </div>
+            </div>
+            <!-- Body -->
+            <div class = "section_body">
+              <h2>
+                Check out what we're doing.
+              </h2>
+              <p>
+                All of our projects are currently hosted on the official <a class = "t1" href = "https://github.com/crew">CREW Github account</a>. We also have constructed a list of current and completed projects seen below.
+                <br>
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque feugiat lacus vitae risus dignissim at iaculis arcu elementum. Cras consectetur, diam sed auctor dignissim, magna mauris malesuada tortor, et porttitor turpis ipsum eget arcu. Donec sed eleifend tortor. Aenean ante enim, faucibus vel lacinia ut, placerat eget lorem. Praesent sed urna sed orci malesuada lobortis. Fusce ut augue vel nibh aliquam ultricies ut at risus. Morbi ac libero sapien, et dignissim felis. Nulla facilisi. Morbi rhoncus purus a ligula rhoncus pharetra. Donec erat lacus, posuere at bibendum et, hendrerit vel nunc. Cras eu nibh nec leo dictum porta in quis libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
 
-							<!-- Container for completed projects -->
-							<div class = "project_container">
-								<!-- Project Header -->
-								<div class = "project_header">
-									<!-- Title -->
-									<h2 style = "float:left">Completed Projects</h2>
-									<!-- Up state arrow key -->
-									<a id = "completed_project_up" class = "t2" >&#9660;</a>
-									<!-- Down state arrow key -->
-									<a id = "completed_project_down" class = "t2" style = "display:none;">&#9650;</a>
-								</div>
-								<!-- List of completed projects -->
-								<div id = "completed_projects" style = "display:none">
-									<div>
-										<a href = "http://pitcam.ccs.neu.edu" class = "t2" >
-											Pitcam
-										</a>
-										<p>
-											Phasellus imperdiet diam a orci convallis eu fermentum mi porta. Phasellus felis diam, cursus varius aliquet id, vestibulum eu arcu. Nunc at libero ut eros suscipit fringilla eu vitae est. Morbi pharetra convallis felis vel tincidunt. Nam id dolor nisi. Vestibulum molestie mauris a sapien commodo viverra. Ut vulputate, turpis et imperdiet auctor, ipsum sapien auctor erat, id venenatis libero lacus sit amet ligula. Phasellus est sapien, eleifend eget dictum quis, accumsan a nulla.
-										</p>
-									</div>
-									<br>
+              <!-- Container for completed projects -->
+              <div class = "project_container">
+                <!-- Project Header -->
+                <div class = "project_header">
+                  <!-- Title -->
+                  <h2 style = "float:left">Completed Projects</h2>
+                  <!-- Up state arrow key -->
+                  <a id = "completed_project_up" class = "t2" >&#9660;</a>
+                  <!-- Down state arrow key -->
+                  <a id = "completed_project_down" class = "t2" style = "display:none;">&#9650;</a>
+                </div>
+                <!-- List of completed projects -->
+                <div id = "completed_projects" style = "display:none">
+                  <div>
+                    <a href = "http://pitcam.ccs.neu.edu" class = "t2" >
+                      Pitcam
+                    </a>
+                    <p>
+                      Phasellus imperdiet diam a orci convallis eu fermentum mi porta. Phasellus felis diam, cursus varius aliquet id, vestibulum eu arcu. Nunc at libero ut eros suscipit fringilla eu vitae est. Morbi pharetra convallis felis vel tincidunt. Nam id dolor nisi. Vestibulum molestie mauris a sapien commodo viverra. Ut vulputate, turpis et imperdiet auctor, ipsum sapien auctor erat, id venenatis libero lacus sit amet ligula. Phasellus est sapien, eleifend eget dictum quis, accumsan a nulla.
+                    </p>
+                  </div>
+                  <br>
 
-									<div>
-										<a href = "#" class = "t2" >
-											Project 2
-										</a>
-										<p>
-											Phasellus imperdiet diam a orci convallis eu fermentum mi porta. Phasellus felis diam, cursus varius aliquet id, vestibulum eu arcu. Nunc at libero ut eros suscipit fringilla eu vitae est. Morbi pharetra convallis felis vel tincidunt. Nam id dolor nisi. Vestibulum molestie mauris a sapien commodo viverra. Ut vulputate, turpis et imperdiet auctor, ipsum sapien auctor erat, id venenatis libero lacus sit amet ligula. Phasellus est sapien, eleifend eget dictum quis, accumsan a nulla.
-										</p>
-									</div>
-								<!-- / list of completed projects -->
-								</div>
-							<!-- / completed projects container -->
-							</div>
+                  <div>
+                    <a href = "#" class = "t2" >
+                      Project 2
+                    </a>
+                    <p>
+                      Phasellus imperdiet diam a orci convallis eu fermentum mi porta. Phasellus felis diam, cursus varius aliquet id, vestibulum eu arcu. Nunc at libero ut eros suscipit fringilla eu vitae est. Morbi pharetra convallis felis vel tincidunt. Nam id dolor nisi. Vestibulum molestie mauris a sapien commodo viverra. Ut vulputate, turpis et imperdiet auctor, ipsum sapien auctor erat, id venenatis libero lacus sit amet ligula. Phasellus est sapien, eleifend eget dictum quis, accumsan a nulla.
+                    </p>
+                  </div>
+                <!-- / list of completed projects -->
+                </div>
+              <!-- / completed projects container -->
+              </div>
 
-							<!-- Container for current projects; used to make the bottom border move from below the project_header to the bottom of the project body. -->
-							<div class = "project_container">
-								<!-- Project Header -->
-								<div class = "project_header">
-									<!-- Title -->
-									<h2 style = "float:left">Current Projects</h2>
-									<!-- Up state arrow key -->
-									<a id = "current_project_up" class = "t2">&#9660;</a>
-									<!-- Down state arrow key -->
-									<a id = "current_project_down" class = "t2" style = "display:none;">&#9650;</a>
-								</div>
-								<!-- List of current projects -->
-								<div id = "current_projects" style = "display:none">
-									<div>
-										<a href = "https://github.com/crew/crewtinuous-deployment" class = "t2" >
-											Crewtinuous Deployment
-										</a>
-										<p>
-											This projected is a deployment system for crew. It hooks into Github's WebHook Service Hooks. Configure a webserver to host this repo then point the Service Hook at that URL.
-										</p>
-									</div>
-									<br>
-									<div>
-										<a href = "https://github.com/crew/crewu-bootcamp" class = "t2" >
-											CrewU
-										</a>
-										<p>
-											CrewU is a current project that is meant to teach incoming and current Crew members the basics of Linux and Web Development. The project is broken down into 4 parts: Linux Basics, Linux Advanced, Linux Infrastructure, and Web Development.
-										</p>
-									</div>
-									<br>
-									<div>
-										<a href = "https://github.com/crew/dds" class = "t2" >
-											Digital Display System
-										</a>
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus rhoncus malesuada. Curabitur aliquet vestibulum eros sed feugiat. Phasellus imperdiet diam a orci convallis eu fermentum mi porta. Phasellus felis diam, cursus varius aliquet id, vestibulum eu arcu. Nunc at libero ut eros suscipit fringilla eu vitae est. Morbi pharetra convallis felis vel tincidunt. Nam id dolor nisi. Vestibulum molestie mauris a sapien commodo viverra. Ut vulputate, turpis et imperdiet auctor, ipsum sapien auctor erat, id venenatis libero lacus sit amet ligula. Phasellus est sapien, eleifend eget dictum quis, accumsan a nulla.
-										</p>
-									</div>
-									<br>
-									<div>
-										<a href = "https://github.com/crew/metrics2" class = "t2" >
-											Metrics
-										</a>
-										<p>
-											ALI SC|```` ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus rhoncus malesuada. Curabitur aliquet vestibulum eros sed feugiat. Phasellus imperdiet diam a orci convallis eu fermentum mi porta. Phasellus felis diam, cursus varius aliquet id, vestibulum eu arcu. Nunc at libero ut eros suscipit fringilla eu vitae est. Morbi pharetra convallis felis vel tincidunt. Nam id dolor nisi. Vestibulum molestie mauris a sapien commodo viverra. Ut vulputate, turpis et imperdiet auctor, ipsum sapien auctor erat, id venenatis libero lacus sit amet ligula. Phasellus est sapien, eleifend eget dictum quis, accumsan a nulla.
-										</p>
-									</div>
-								<!-- / list of current projects -->
-								</div>
-							<!-- / current projects container -->
-							</div>
+              <!-- Container for current projects; used to make the bottom border move from below the project_header to the bottom of the project body. -->
+              <div class = "project_container">
+                <!-- Project Header -->
+                <div class = "project_header">
+                  <!-- Title -->
+                  <h2 style = "float:left">Current Projects</h2>
+                  <!-- Up state arrow key -->
+                  <a id = "current_project_up" class = "t2">&#9660;</a>
+                  <!-- Down state arrow key -->
+                  <a id = "current_project_down" class = "t2" style = "display:none;">&#9650;</a>
+                </div>
+                <!-- List of current projects -->
+                <div id = "current_projects" style = "display:none">
+                  <div>
+                    <a href = "https://github.com/crew/crewtinuous-deployment" class = "t2" >
+                      Crewtinuous Deployment
+                    </a>
+                    <p>
+                      This projected is a deployment system for crew. It hooks into Github's WebHook Service Hooks. Configure a webserver to host this repo then point the Service Hook at that URL.
+                    </p>
+                  </div>
+                  <br>
+                  <div>
+                    <a href = "https://github.com/crew/crewu-bootcamp" class = "t2" >
+                      CrewU
+                    </a>
+                    <p>
+                      CrewU is a current project that is meant to teach incoming and current Crew members the basics of Linux and Web Development. The project is broken down into 4 parts: Linux Basics, Linux Advanced, Linux Infrastructure, and Web Development.
+                    </p>
+                  </div>
+                  <br>
+                  <div>
+                    <a href = "https://github.com/crew/dds" class = "t2" >
+                      Digital Display System
+                    </a>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus rhoncus malesuada. Curabitur aliquet vestibulum eros sed feugiat. Phasellus imperdiet diam a orci convallis eu fermentum mi porta. Phasellus felis diam, cursus varius aliquet id, vestibulum eu arcu. Nunc at libero ut eros suscipit fringilla eu vitae est. Morbi pharetra convallis felis vel tincidunt. Nam id dolor nisi. Vestibulum molestie mauris a sapien commodo viverra. Ut vulputate, turpis et imperdiet auctor, ipsum sapien auctor erat, id venenatis libero lacus sit amet ligula. Phasellus est sapien, eleifend eget dictum quis, accumsan a nulla.
+                    </p>
+                  </div>
+                  <br>
+                  <div>
+                    <a href = "https://github.com/crew/metrics2" class = "t2" >
+                      Metrics
+                    </a>
+                    <p>
+                      ALI SC|```` ipsum dolor sit amet, consectetur adipiscing elit. Integer cursus rhoncus malesuada. Curabitur aliquet vestibulum eros sed feugiat. Phasellus imperdiet diam a orci convallis eu fermentum mi porta. Phasellus felis diam, cursus varius aliquet id, vestibulum eu arcu. Nunc at libero ut eros suscipit fringilla eu vitae est. Morbi pharetra convallis felis vel tincidunt. Nam id dolor nisi. Vestibulum molestie mauris a sapien commodo viverra. Ut vulputate, turpis et imperdiet auctor, ipsum sapien auctor erat, id venenatis libero lacus sit amet ligula. Phasellus est sapien, eleifend eget dictum quis, accumsan a nulla.
+                    </p>
+                  </div>
+                <!-- / list of current projects -->
+                </div>
+              <!-- / current projects container -->
+              </div>
 
-						<!-- / section body -->
-						</div>
-					<!-- / projects -->
-					</div>
+            <!-- / section body -->
+            </div>
+          <!-- / projects -->
+          </div>
 
-					<!-- Contact -->
-					<div id = "contact">
-						<!-- Container for title and top button -->
-						<div class = "section_title_container">
-							<!-- Title -->
-							<div class = "section_title" style = "width:170px;float:left;">
-								<h1 class = "section_title" style = "color:#3faa7f"> >> contact</h1>
-							</div>
-							<!-- Top button -->
-							<div class = "section_title" style = "float:right">
-								<a class = "top_button" href = "#top">^</a>
-							</div>
-						</div>
-						<!-- Body -->
-						<div class = "section_body">
-							<h2>
-								Got any questions?
-							</h2>
-							<p>
-								The best way to contact us is to join our
-								<a class = "t1" href = "https://www.facebook.com/groups/crew.ccis/">
-									Facebook group</a>.
-								<br>
-								 You can also try stopping by our main headquarters, located at <b>312 West Village H</b>, aka "The Pit".
-							</p>
-						</div>
-					<!-- / contact -->
-					</div>
-				<!-- / column a -->
-				</div>
+          <!-- Contact -->
+          <div id = "contact">
+            <!-- Container for title and top button -->
+            <div class = "section_title_container">
+              <!-- Title -->
+              <div class = "section_title" style = "width:170px;float:left;">
+                <h1 class = "section_title" style = "color:#3faa7f"> >> contact</h1>
+              </div>
+              <!-- Top button -->
+              <div class = "section_title" style = "float:right">
+                <a class = "top_button" href = "#top">^</a>
+              </div>
+            </div>
+            <!-- Body -->
+            <div class = "section_body">
+              <h2>
+                Got any questions?
+              </h2>
+              <p>
+                The best way to contact us is to join our
+                <a class = "t1" href = "https://www.facebook.com/groups/crew.ccis/">
+                  Facebook group</a>.
+                <br>
+                 You can also try stopping by our main headquarters, located at <b>312 West Village H</b>, aka "The Pit".
+              </p>
+            </div>
+          <!-- / contact -->
+          </div>
+        <!-- / column a -->
+        </div>
 
 
-				<!-- Column B -->
-				<div class = "column_b" style = "padding-top:8px">
-					<!-- Title -->
-					<div class = "section_title" style = "width:160px;">
-						<h1 class = "section_title" style = "font-size:1.5em;color:#fab05d"> >> other stuff</h1>
-					</div>
-					<!-- Body -->
-					<div class = "section_body">
-						<!-- Find us here -->
-						<div>
-							<h3>
-								Find us here.
-							</h3>
-							<!-- Buttons -->
-							<ul class = "main_nav">
-								<li class = "main_nav" style = "width:40px">
-									<a href = "https://www.facebook.com/groups/crew.ccis/">
-										<img class="social" src = "assets/icons/facebook.png" style = "box-shadow:none"></img>
-									</a>
-								</li>
-								<li class = "main_nav" style = "width:40px">
-									<a href = "https://github.com/crew">
-										<img class="social" src = "assets/icons/github.png" style = "box-shadow:none"></img>
-									</a>
-								</li>
-								<li class = "main_nav" style = "width:40px">
-									<a href = "https://wiki.ccs.neu.edu/display/Crew/Home">
-										<img class="social" src = "assets/icons/wiki.png" style = "box-shadow:none"></img>
-									</a>
-								</li>
-							</ul>
-						</div>
+        <!-- Column B -->
+        <div class = "column_b" style = "padding-top:8px">
+          <!-- Title -->
+          <div class = "section_title" style = "width:160px;">
+            <h1 class = "section_title" style = "font-size:1.5em;color:#fab05d"> >> other stuff</h1>
+          </div>
+          <!-- Body -->
+          <div class = "section_body">
+            <!-- Find us here -->
+            <div>
+              <h3>
+                Find us here.
+              </h3>
+              <!-- Buttons -->
+              <ul class = "main_nav">
+                <li class = "main_nav" style = "width:40px">
+                  <a href = "https://www.facebook.com/groups/crew.ccis/">
+                    <img class="social" src = "assets/icons/facebook.png" style = "box-shadow:none"></img>
+                  </a>
+                </li>
+                <li class = "main_nav" style = "width:40px">
+                  <a href = "https://github.com/crew">
+                    <img class="social" src = "assets/icons/github.png" style = "box-shadow:none"></img>
+                  </a>
+                </li>
+                <li class = "main_nav" style = "width:40px">
+                  <a href = "https://wiki.ccs.neu.edu/display/Crew/Home">
+                    <img class="social" src = "assets/icons/wiki.png" style = "box-shadow:none"></img>
+                  </a>
+                </li>
+              </ul>
+            </div>
 
-						<!-- No experience -->
-						<div>
-							<h3>
-								No experience?
-							</h3>
-							<p class = "small">
-								Don't worry, we've got you covered. If you want to help out, but don't actually know very much about web development, etc(needs editing) Crew U is there to help you learn. Through a series of bootcamps in the Linux Terminal, Web Dev and [...were there more?] we'll get you up to speed with what you need to know to contribute.
-							</p>
-						</div>
+            <!-- No experience -->
+            <div>
+              <h3>
+                No experience?
+              </h3>
+              <p class = "small">
+                Don't worry, we've got you covered. If you want to help out, but don't actually know very much about web development, etc(needs editing) Crew U is there to help you learn. Through a series of bootcamps in the Linux Terminal, Web Dev and [...were there more?] we'll get you up to speed with what you need to know to contribute.
+              </p>
+            </div>
 
-						<!-- Helpful links -->
-						<div>
-							<h3>Helpful links.</h3>
-							<p>
-								<a class = "t1" href = "http://howto.ccs.neu.edu/">CCIS FAQ</a>
-								<br>
-								<a class = "t1" href = "http://crew.ccs.neu.edu/handbook.pdf">Handbook</a>
-								<br>
-							</p>
-						</div>
-					</div>
-				<!-- / column b -->
-				</div>
-			<!-- / meat -->
-			</div>
+            <!-- Helpful links -->
+            <div>
+              <h3>Helpful links.</h3>
+              <p>
+                <a class = "t1" href = "http://howto.ccs.neu.edu/">CCIS FAQ</a>
+                <br>
+                <a class = "t1" href = "http://crew.ccs.neu.edu/handbook.pdf">Handbook</a>
+                <br>
+              </p>
+            </div>
+          </div>
+        <!-- / column b -->
+        </div>
+      <!-- / meat -->
+      </div>
 
-			<!-- Footer Container -->
-			<div class = "footer_container">
-				<!-- Footer -->
-				<div class = "footer">
-					<div style = "float:left">
-						<!-- Northeastern Logo -->
-						<a href = "http://www.ccs.neu.edu" id = "northeastern_logo"></a>
-						<p class = "footer">
-							CREW &#9400; 2013. All Rights Reserved.
-						</p>
-					</div>
-					<!-- Buttons -->
-					<div id = "footer_buttons">
-						<ul class = "main_nav">
-							<li class = "main_nav" style = "width:40px">
-								<a href = "https://www.facebook.com/groups/crew.ccis/">
-									<img class="social" src = "assets/icons/facebook.png" style = "box-shadow:none"></img>
-								</a>
-							</li>
-							<li class = "main_nav" style = "width:40px">
-								<a href = "https://github.com/crew">
-									<img class="social" src = "assets/icons/github.png" style = "box-shadow:none"></img>
-								</a>
-							</li>
-							<li class = "main_nav" style = "width:40px">
-								<a href = "https://wiki.ccs.neu.edu/display/Crew/Home">
-									<img class="social" src = "assets/icons/wiki.png" style = "box-shadow:none"></img>
-								</a>
-							</li>
-						</ul>
-					</div>
-				<!-- / footer -->
-				</div>
-			<!-- / footer container -->
-			</div>
-		<!-- / container -->
-		</div>
-	</body>
+      <!-- Footer Container -->
+      <div class = "footer_container">
+        <!-- Footer -->
+        <div class = "footer">
+          <div style = "float:left">
+            <!-- Northeastern Logo -->
+            <a href = "http://www.ccs.neu.edu" id = "northeastern_logo"></a>
+            <p class = "footer">
+              CREW &#9400; 2013. All Rights Reserved.
+            </p>
+          </div>
+          <!-- Buttons -->
+          <div id = "footer_buttons">
+            <ul class = "main_nav">
+              <li class = "main_nav" style = "width:40px">
+                <a href = "https://www.facebook.com/groups/crew.ccis/">
+                  <img class="social" src = "assets/icons/facebook.png" style = "box-shadow:none"></img>
+                </a>
+              </li>
+              <li class = "main_nav" style = "width:40px">
+                <a href = "https://github.com/crew">
+                  <img class="social" src = "assets/icons/github.png" style = "box-shadow:none"></img>
+                </a>
+              </li>
+              <li class = "main_nav" style = "width:40px">
+                <a href = "https://wiki.ccs.neu.edu/display/Crew/Home">
+                  <img class="social" src = "assets/icons/wiki.png" style = "box-shadow:none"></img>
+                </a>
+              </li>
+            </ul>
+          </div>
+        <!-- / footer -->
+        </div>
+      <!-- / footer container -->
+      </div>
+    <!-- / container -->
+    </div>
+  </body>
 </html>
