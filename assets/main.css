@@ -154,7 +154,7 @@ a.banner:hover {
 	opacity:.5;
 }
 a.main_nav /* Main navigation elements */ {
-	font-family: sans-serif;
+	font-family: "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
 	font-weight:bold;
 	font-size:2.5em;
 	color:#262626;
@@ -181,7 +181,7 @@ a.t1:hover {
 a.t2 /* Link type 2. Used for element switcher */ {
 	color:#4966a7;
 	font-size:1.4em;
-	font-family: sans-serif;
+	font-family: "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
 	font-weight:200;
 	margin:0;
 	padding:0;
@@ -201,7 +201,7 @@ a.t2:hover {
 a.top_button /* Top button */ {
 	color:#ffffff;
 	font-size:2em;
-	font-family: sans-serif;
+	font-family: "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
 	font-weight:200;
 	margin:0;
 	padding:0;
@@ -282,7 +282,7 @@ p.footer {
 h1 {
 	color:#000000;
 	font-size:3em;
-	font-family: Open Sans, sans-serif;
+	font-family: Open Sans, "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
 	font-weight:400;
 	margin:0;
 	padding:0;
@@ -291,12 +291,12 @@ h1.section_title {
 	font-size:2em;
 	font-weight:bold;
 	color:#fefefe;
-	font-family: sans-serif;
+	font-family: "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
 }
 h2 {
 	color:#262626;
 	font-size:2em;
-	font-family: sans-serif;
+	font-family: "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
 	font-weight:200;
 	margin:0;
 	padding:10 0px;
@@ -304,14 +304,14 @@ h2 {
 h3 {
 	color:#262626;
 	font-size:1.4em;
-	font-family:Open Sans, sans-serif;
+	font-family:Open Sans, "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
 	font-weight:400;
 	margin:0;
 	padding:0;
 }
 h3.tagline {
 	font-size: 25px;
-	font-family: Questrial, sans-serif;
+	font-family: Questrial, "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
 	color:#fefefe;
 }
 
