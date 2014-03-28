@@ -156,7 +156,7 @@ a.banner:hover {
 a.main_nav /* Main navigation elements */ {
 	font-family: "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
 	font-weight:bold;
-	font-size:2.5em;
+	font-size:1.7em;
 	color:#262626;
 	border-bottom:14px solid;
 	padding-bottom:10px;
@@ -235,7 +235,7 @@ ul.main_nav, ul.other_nav /*Used in main navigation bar*/ {
 
 li.main_nav /*Used in main navigation bar*/ {
 	float:left;
-	width:33.33%;
+	width:25%;
 }
 
 li.other_nav /*Used in column b navigation bar*/{
