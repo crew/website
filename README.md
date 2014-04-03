@@ -1,4 +1,8 @@
 website
 =======
 
-What is this? A center for ants?
+To do:
+Add "People" page
+Update contacts
+Fix links -> more pages?!
+much donation
