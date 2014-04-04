@@ -18,51 +18,6 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/icons/favicon.png?ver=1.02"/>
 
-    <!-- Smooth Scrolling -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
-    <script>
-    var jump=function(e)
-    {
-         //prevent the "normal" behaviour which would be a "hard" jump
-         e.preventDefault();
-         //Get the target
-         var target = $(this).attr("href");
-         //perform animated scrolling
-         $('html,body').animate(
-         {
-             //get top-position of target-element and set it as scroll target
-             scrollTop: $(target).offset().top
-         //scrolldelay: 2 seconds
-         },1300,function()
-         {
-             //attach the hash (#jumptarget) to the pageurl
-             location.hash = target;
-         });
-
-    }
-
-    $(document).ready(function()
-    {
-         $('a[href*=#]').bind("click", jump);
-               $('a[id*="project"]').click(toggle);
-               function toggle() {
-                  prefix = this.id.split('_')[0];
-                  switchMenu(prefix + '_projects');
-                  switchMenu(prefix + '_project_up');
-                  switchMenu(prefix + '_project_down')
-               }
-    });
-    </script>
-
-    <!-- Display Switcher -->
-    <script type = "text/javascript">
-    function switchMenu(obj)
-    {
-      var el = document.getElementById(obj);
-            el.style.display = el.style.display.length ? '' : 'none';
-    }
-    </script>
-
   </head>
   <body>
 
