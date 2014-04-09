@@ -8,7 +8,8 @@
  * @subpackage Twenty_Fourteen
  * @since Twenty Fourteen 1.0
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
 <![endif]-->
@@ -19,47 +20,121 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width">
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<!--[if lt IE 9]>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
-	<![endif]-->
-	<?php wp_head(); ?>
+    <!-- Title -->
+    <title><?php wp_title( '|', true, 'right' ); ?></title>
+
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+    <!--[if lt IE 9]>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
+    <![endif]-->
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" type="text/css" href="<?php echo esc_url(get_stylesheet_uri()); ?>" />
+
+    <!-- Mobile Stuff + CSS -->
+    <link rel = "stylesheet" type = "text/css" href = "assets/mobile.css?ver=1.02" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600|Gentium+Book+Basic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Questrial|Montserrat+Alternates|Press+Start+2P' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/icons/favicon.png?ver=1.02"/>
+
+    <!-- Smooth Scrolling -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <script>
+        var jump=function(e)
+        {
+            //prevent the "normal" behaviour which would be a "hard" jump
+            e.preventDefault();
+            //Get the target
+            var target = $(this).attr("href");
+            //perform animated scrolling
+            $('html,body').animate(
+                {
+                    //get top-position of target-element and set it as scroll target
+                    scrollTop: $(target).offset().top
+                    //scrolldelay: 2 seconds
+                },1300,function()
+                {
+                    //attach the hash (#jumptarget) to the pageurl
+                    location.hash = target;
+                });
+
+        }
+
+        $(document).ready(function()
+        {
+            $('a[href*=#]').bind("click", jump);
+            $('a[id*="project"]').click(toggle);
+            function toggle() {
+                prefix = this.id.split('_')[0];
+                switchMenu(prefix + '_projects');
+                switchMenu(prefix + '_project_up');
+                switchMenu(prefix + '_project_down')
+            }
+        });
+    </script>
+
+    <!-- Display Switcher -->
+    <script type = "text/javascript">
+        function switchMenu(obj)
+        {
+            var el = document.getElementById(obj);
+            el.style.display = el.style.display.length ? '' : 'none';
+        }
+    </script>
+    <?php wp_head(); ?>
+
 </head>
 
+
+
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<?php if ( get_header_image() ) : ?>
-	<div id="site-header">
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-			<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-		</a>
-	</div>
-	<?php endif; ?>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="header-main">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+<!-- Container for the header; spans entire width of page -->
+<div class = "header_container" id = "top">
+    <!-- Container for main nav and banner; spans 1024px and centers on page -->
+    <div class = "header">
+        <!-- Banner -->
 
-			<div class="search-toggle">
-				<a href="#search-container" class="screen-reader-text"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
-			</div>
+        <div class = "banner_container">
+            <a href = "<?php echo esc_url( home_url( '/' ) ); ?>" class = "banner"></a>
+        </div>
+        <!-- Main nav -->
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container_class' => 'main_nav_container', 'menu_class' => 'main_menu' ) ); ?>
 
-			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
-				<h1 class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></h1>
-				<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-			</nav>
-		</div>
+    </div>
+</div>
 
-		<div id="search-container" class="search-box-wrapper hide">
-			<div class="search-box">
-				<?php get_search_form(); ?>
-			</div>
-		</div>
-	</header><!-- #masthead -->
+<!-- Contains the meat of the page -->
+<div class = "container">
+    <!-- Meat of the page -->
+    <div class = "meat">
 
-	<div id="main" class="site-main">
+        <!-- Container for meat header, image, and tagline -->
+        <?php if ( get_header_image() ) : ?>
+        <div class = "meat_header_container">
+            <!-- The title -->
+            <div id = "header" class = "meat_header">
+                <h3 style = "color:#efefef">Northeastern University CCIS</h3>
+                <h1 style = "color:#efefef;font-family: 'Questrial';">Undergraduate Experimental Systems Group</h1>
+            </div>
+            <!-- Image Slide Show -->
+            <div id = "bgcarousel_shell">
+                <img src = "<?php header_image(); ?>" width="100%"/>
+            </div>
+            <!-- The tagline -->
+            <div id = "tagline" class = "meat_header">
+                <h3 class = "tagline">
+                    <?php bloginfo( 'description' ); ?>
+                </h3>
+            </div>
+            <!--- / container -->
+        </div>
+        <?php endif; ?>
