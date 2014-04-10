@@ -1,0 +1,333 @@
+/*
+Theme Name: Crew
+Theme URI: http://crew.ccs.neu.edu
+Author: Eddie Hurtig, Teresa Krause, CCIS Crew
+Author URI: http://crew.ccs.neu.edu/
+Description: The theme for the Crew's Website that hosts member info, Project Info, Galleries, and possibly documentation at some point in time.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: ccis-crew
+*/
+/*
+* CREW Website
+*/
+
+
+/*--------------------------------------------------------*/
+/* Setting up generic stuff */
+body {
+    padding:0px;
+    margin:0px;
+    background-color:#181818;
+    background-image:url('assets/background/bg_squares.png');
+    background-repeat:repeat;
+}
+
+/*--------------------------------------------------------*/
+/* Divs */
+div {
+    padding:0px;
+    margin:0px;
+    overflow:hidden;
+}
+div.container /* Main container for page. */ {
+    position:relative;
+    min-height:100%;
+    min-width:1024px;
+}
+div.header_container /* Container for header (banner + logo) */ {
+    position:relative;
+    background-color:#fefefe;
+    width:100%;
+
+    padding-top:10px;
+    padding-bottom:10px;
+}
+div.header /* Sets up the container that auto centers */ {
+    margin:auto;
+    width:1024px;
+}
+div.banner_container {
+    float:left;
+}
+div.main_nav_container {
+    float:right;
+    width:615px;
+}
+div.meat {
+    position:relative;
+    margin:auto;
+    width:1024px;
+    overflow:hidden;
+    background-color: transparent;
+    top:13px;
+    padding-top:10px;
+    padding-bottom:120px;
+}
+div.meat_header_container {
+    overflow:hidden;
+    background-color:#fefefe;
+    margin-bottom:10px;
+}
+div.meat_header {
+    background-color:#3f3f3f;
+    padding:10px;
+}
+div.section_title_container {
+}
+div.section_title {
+    background-color: #3f3f3f;
+    margin-left:0px;
+    margin-bottom:-8px;
+    padding:5px;
+    border-radius:1px;
+}
+div.section_body {
+    background-color:#fefefe;
+    border-top:8px solid;
+    border-color:#3f3f3f;
+    margin-bottom:20px;
+}
+div.project_container {
+    border-bottom:1px solid;
+    border-color:#aeaeae;
+    margin-bottom:10px;
+    margin-top:10px;
+    padding-bottom:10px;
+}
+div.project_header {
+
+}
+div.column_a {
+    float:left;
+    width:760px;
+    background-color: transparent;
+}
+div.column_a .section_body{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+div.column_b {
+    float:right;
+    width:200px;
+    background-color: transparent;
+}
+div.column_b .section_body{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+div.footer_container {
+    position:absolute;
+    width:100%;
+    min-width:1024px;
+    background-color:#3f3f3f;
+    border-top:8px solid;
+    border-color:#333333;
+    bottom:0px;
+}
+div.footer {
+    width:1024px;
+    margin:auto;
+    padding-bottom:10px;
+}
+div#footer_buttons {
+    float:right;
+    margin-top:-5px;
+    margin-right:10px;
+}
+
+
+/*--------------------------------------------------------*/
+/* Links */
+a {
+    text-decoration:none;
+}
+a.banner /* Main banner for all pages */ {
+    background: url('assets/header/banner.png') no-repeat 0 0;
+    width:365px;
+    height:75px;
+    margin-top:10px;
+    margin-bottom:10px;
+    padding:0px;
+    display:block;
+    -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+}
+a.banner:hover {
+    cursor:pointer;
+    opacity:.5;
+}
+.main_nav li a /* Main navigation elements */ {
+    font-family: "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
+    font-weight:bold;
+    font-size:1.7em;
+    color:#262626;
+    border-bottom:14px solid;
+    padding-bottom:10px;
+    padding-top:0px;
+    margin-top:16px;
+    text-align:center;
+    display:block;
+    -webkit-transition: color .25s ease-in-out;
+    -moz-transition: color .25s ease-in-out;
+}
+.main_nav li a:hover {
+    color:#9c9c9c;
+}
+a.t1 /* Link type 1. Used for projects */{
+    font-family: Open Sans, sans-serif;
+    color:#4966a7;
+    font-size:1em;
+}
+a.t1:hover {
+    text-decoration: underline;
+}
+a.t2 /* Link type 2. Used for element switcher */ {
+    color:#4966a7;
+    font-size:1.4em;
+    font-family: "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
+    font-weight:200;
+    margin:0;
+    padding:0;
+}
+a.t2[id*="project"] {
+    float:right;
+    margin-top:12px;
+}
+a.t2[id*="project"]:hover {
+    cursor: pointer;
+}
+a.t2:hover {
+    text-decoration: underline;
+}
+
+
+a.top_button /* Top button */ {
+    color:#ffffff;
+    font-size:2em;
+    font-family: "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
+    font-weight:200;
+    margin:0;
+    padding:0;
+    -webkit-transition: color .25s ease-in-out;
+    -moz-transition: color .25s ease-in-out;
+}
+
+a.top_button:hover {
+    color:#9c9c9c;
+}
+
+a#northeastern_logo /* Northeastern Logo seen in footer */ {
+    background: url('assets/footer/northeastern_logo.png') no-repeat 0 0;
+    background-size:100%;
+    display:block;
+    width:351px;
+    height:33px;
+    margin:10px;
+}
+
+
+/*--------------------------------------------------------*/
+/* Lists */
+ul.main_nav, ul.other_nav /*Used in main navigation bar*/ {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    width:100%;
+}
+
+.main_nav li /*Used in main navigation bar*/ {
+    float:left;
+    width:25%;
+}
+
+li.other_nav /*Used in column b navigation bar*/{
+    float:left;
+    width:205px;
+    padding-right:16px;
+}
+
+.social{
+    -webkit-transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+}
+
+.social:hover{
+    opacity:0.4;
+}
+/*--------------------------------------------------------*/
+/* Tables */
+table {
+    padding:0px;
+    margin:0px;
+}
+
+/*--------------------------------------------------------*/
+/* Text */
+p {
+    color:#000000;
+    font-size:.9em;
+    font-family: Open Sans, verdana;
+    margin:0;
+    padding:0;
+}
+p.small {
+    font-size:.8em;
+}
+p.footer {
+    color:#efefef;
+    font-size:.8em;
+    margin-left:10px
+}
+.column_a p{
+    line-height: 23px;
+}
+h1 {
+    color:#000000;
+    font-size:3em;
+    font-family: Open Sans, "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
+    font-weight:400;
+    margin:0;
+    padding:0;
+}
+h1.section_title {
+    font-size:2em;
+    font-weight:bold;
+    color:#fefefe;
+    font-family: "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
+}
+h2 {
+    color:#262626;
+    font-size:2em;
+    font-family: "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
+    font-weight:200;
+    margin:0;
+    padding:10 0px;
+}
+h3 {
+    color:#262626;
+    font-size:1.4em;
+    font-family:Open Sans, "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
+    font-weight:400;
+    margin:0;
+    padding:0;
+}
+h3.tagline {
+    font-size: 25px;
+    font-family: Questrial, "Neue Haas Grotesk", "Helvetica Neue", "Segoe UI" "Ubuntu Sans", "Cantarell", "Droid sans", sans-serif;
+    color:#fefefe;
+}
+
+
+/*--------------------------------------------------------*/
+/* Images */
+img {
+    display:block;
+    box-shadow:0px 0px 10px 1px #333333;
+}
