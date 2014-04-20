@@ -42,7 +42,7 @@
 
         $(document).ready(function()
         {
-            $('a[href*=#]').bind("click", jump);
+            $('a[href^=#]').bind("click", jump);
             $('a[id*="project"]').click(toggle);
             function toggle() {
                 prefix = this.id.split('_')[0];
@@ -114,7 +114,7 @@
     </div>
     <!-- Image Slide Show -->
     <div id = "bgcarousel_shell">
-        <img src = "assets/images/crew.jpg"/>
+        <img src = "assets/images/rainbow_crew.jpeg"/>
     </div>
     <!-- The tagline -->
     <div id = "tagline" class = "meat_header">

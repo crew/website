@@ -43,7 +43,7 @@
 
     $(document).ready(function()
     {
-         $('a[href*=#]').bind("click", jump);
+         $('a[href^=#]').bind("click", jump);
                $('a[id*="project"]').click(toggle);
                function toggle() {
                   prefix = this.id.split('_')[0];
